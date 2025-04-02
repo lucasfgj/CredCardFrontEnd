@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.container-main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;  
+}
+
+.img-card{
+    width: 35vw;
+    height: 100vh;
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    display: flex;
+}
+.card{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formulario{
+    width: 40vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.div-form1{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.div-form2{
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+}
+
+input{
+    border-radius: 5px;
+    border-color: gray;
+    border: 1px solid;
+    padding: 5px;
+}
+.input-form1{
+    width: 18vw;
+    height: 4vh;
+}
+.input-form2{
+    height: 4vh;
+    width: 2vw;
+}
+.div-date-card{
+    gap: 5px;
+}
+.cvv-card{
+    width: 5px;
+}
