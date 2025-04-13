@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleMobile.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive card details form</title>
@@ -16,68 +17,80 @@
 </head>
 <body>
   <div class="container-main">
-    <div class="img-card">
-      
-    </div>
+    <div class="img-card"></div>
     <div class="card">
-      <form class="formulario">
-        <div class="div-form1">
-          <label for=""> Cardholder Name</label>
-          <input type="text" class="input-form1">
-          <label for="">Card Number</label>
-          <input type="text" class="input-form1">
-        </div>
-        <div class="div-form2">
-          <div class="div-date-card">
-            <div>
+      <div id ="div-container1" class="container01">
+        <form class="formulario">
+          <div class="div-form1">
+            <label for=""> Cardholder Name</label>
+            <input type="text" id="nome_card" class="input-form1" placeholder="e.g. Jane Appleseed">
+  
+            <label for="">Card Number</label>
+            <input type="text" id="num_card" class="input-form1" placeholder="e.g. 1234 5678 9123 0000">
+            <p class="erro_msg" id="erro_numCard"><span class="span_numberCard">Wrong format, numbers only</span></p>
+          </div>
+          <div class="div-form2">
+            <div class="div-date-card">
               <label for="">Exp. Date (MM/YY)</label>
+              <div>
+                <input type="text" id="mes_card" class="input-form2" placeholder="MM" >
+                <input type="text" id="ano_card" class="input-form2" placeholder="YY" >
+              </div>
+              <p class="erro_msg" id="erro_dataAno"><span>Can't be blank</span></p>
             </div>
-            <input type="text" class="input-form2">
-            <input type="text" class="input-form2">
+            <div class="cvv-card">
+              <div>
+                <label for="">CVC</label>
+              </div>
+              <input type="text" id="cvv_card" class="input-form-cvv" placeholder="e.g. 123">
+              <p class="erro_msg" id="erro_cvv"><span>Can't be blank</span></p>
+            </div>
           </div>
-          <div class="cvv-card">
-            <div>
-              <label for="">CVC</label>
+          <div class="div-button">
+            <input type="button" id="btn_submit" class="btn" placeholder="Confirm" value="Confirm">
+          </div>
+        </form>
+      </div>
+      <div id ="div-container2" class="container02">
+        <div class="img-card-front">
+          <div class="div-cvv-front">
+            <div class="img-cvv-front">
+              <img src="./images/card-logo.svg" alt="card-logo">
             </div>
-            <input type="text" class="input-form-cvv">
+            <div class="num-card-front">
+              <p>0000 0000 0000 0000</p>
+            </div>
+            <div class="div-name-card">
+              <p>Jane Appleseed</p>
+              <p>00/00</p>
+            </div>
           </div>
         </div>
-      </form>
-    </div>
-    <div>
-<!--
-      0000 0000 0000 0000
-      Jane Appleseed
-      00/00
-    
-      000
-    
-     
-      e.g. Jane Appleseed
-    
-      
-      e.g. 1234 5678 9123 0000
-    
-      
-      MM
-      YY
-    
-      
-      e.g. 123
-    
-      Confirm
-    
-       Completed state start 
-    
-      Thank you!
-      We've added your card details
-      Continue
-      
+        <div class="img-card-back">
+          <div class="div-cvv-back">
+            <p>000</p>
+          </div>
+        </div>
+      </div>
+      <div id ="div-container3" class="container03">
+        <div class="div-completed">
+          <img src="./images/icon-complete.svg" alt="icon-complete">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <input type="button" id="btn_continue" class="btn-completed" value="Continue">
+        </div>
+      </div>
+  </div>
+ 
+  <script src="script.js"></script>
+
+
+  <!--
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>        
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Your Name Here</a>.
       </div>   -->
-    </div>
-  </div>
+
 </body>
 </html>

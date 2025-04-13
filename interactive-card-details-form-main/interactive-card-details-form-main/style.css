@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    
+}
+
 *{
     box-sizing: border-box;
     border: 0;
@@ -9,6 +19,12 @@
     height: 100vh;
     width: 100vw;
     display: flex;  
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    color: var(--Very-dark-violet);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 .img-card{
@@ -28,43 +44,188 @@ body{
     justify-content: center;
 }
 .formulario{
-    width: 40vw;
+    width: 25vw;
     height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.div-form1, .div-form2, .div-button{
+    display: flex;
+    width: 20vw;
+    gap: 10px;
+}
+.div-form1{
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.div-form2{
+    flex-direction: row;
+}
+
+input{
+    border-radius: 5px;
+    border: 1px solid rgba(170, 168, 168, 0.623);
+    padding: 10px;
+}
+input::placeholder {
+    color: var(--Dark-grayish-violet);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.input-form1{
+    width: 18vw;
+    height: 4vh;
+    margin-top: -15px;
+}
+.input-form2{
+    height: 4vh;
+    width: 4.3vw;
+}
+.div-date-card{
+    height: 8vh;
+    width: 10vw;
+}
+.div-date-card div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.cvv-card{
+    height: 8vh;
+    width: 8vw;
+}
+.input-form-cvv{
+    width: 7.5vw;
+    height: 4vh;
+    margin-top: 8px;
+}
+
+.btn{
+    width: 18vw;
+    height: 4vh;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.img-card-front{
+    width: 23vw;
+    height: 27vh;
+    background-image: url(./images/bg-card-front.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 80em;
+    top: 15em;
+    display: flex; 
+}
+.img-card-back{
+    width: 23vw;
+    height: 27vh;
+    background-image: url(./images/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 75em;
+    top: 35em;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+} 
+.div-cvv-back{
+    width: 20vw;
+    height: 4vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 35px 5px 0;
+    color: white;
+}
+.div-cvv-front{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    font-size: 15px;
+    width: 100vw;
+}
+.div-cvv-front div{
+    margin: 10px 20px;
+}
+.num-card-front p{
+    font-size: 25px;
+}
+
+.div-name-card{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+input:hover{
+    cursor: pointer;
+    border: 1px solid hsl(278, 68%, 11%);
+    transition: 0.3s;
+    outline: none;
+}
+.erro_msg{
+    display: none;
+}
+p span{
+    font-size: 12px;
+    color: red;
+    text-transform: none;
+    letter-spacing: 1px;
+    opacity:1;
+}
+
+.span_numberCard {
+    position: relative;
+    top: -10px;
+}
+
+.container03{
+    display: none;
+}
+
+.div-completed{
+    width: 25vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2em;
 }
-.div-form1{
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.div-completed p{
+    font-size: 17px;
+    color: gray;
+    text-transform: none;
+    letter-spacing: 0px;
 }
-.div-form2{
-    width: 20vw;
-    display: flex;
-    flex-direction: row;
-}
-
-input{
+.btn-completed{
+    background-color: hsl(278, 68%, 11%);
+    color: white;
     border-radius: 5px;
-    border-color: gray;
-    border: 1px solid;
-    padding: 5px;
-}
-.input-form1{
+    border: none;
+    cursor: pointer;
     width: 18vw;
-    height: 4vh;
-}
-.input-form2{
-    height: 4vh;
-    width: 2vw;
-}
-.div-date-card{
-    gap: 5px;
-}
-.cvv-card{
-    width: 5px;
+    height: 5vh;
+    font-size: 18px;
 }
